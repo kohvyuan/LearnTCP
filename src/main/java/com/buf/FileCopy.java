@@ -13,7 +13,7 @@ public class FileCopy {
         String desFile = "F:\\filecopy\\test13.rar";
         copyFile(srcFile,desFile);
         long endtime = System.currentTimeMillis();
-        System.out.println("”√ ±£∫"+(endtime-begeintime)/1000+" √Î");
+        System.out.println("Áî®Êó∂"+(endtime-begeintime)/1000+"Áßí");
     }
 
     public static void copyFile(String srcFile,String desFile) throws Exception{

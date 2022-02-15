@@ -7,7 +7,7 @@ public class TimeServer {
 
     public static void main(String args[]){
         int port = 9816;
-        MutipleexerTimeServer timeServer = new MutipleexerTimeServer(port);
+        MultiplexerTimeServer timeServer = new MultiplexerTimeServer(port);
         new Thread(timeServer,"nit").start();
     }
 }

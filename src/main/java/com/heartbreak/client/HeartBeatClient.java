@@ -77,7 +77,7 @@ public class HeartBeatClient {
         if (channel != null && channel.isActive()) {
             return;
         }
-        ChannelFuture channelFuture = bootstrap.connect(host, port);
+        final ChannelFuture channelFuture = bootstrap.connect(host, port);
         channelFuture.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture futureListener) throws Exception {

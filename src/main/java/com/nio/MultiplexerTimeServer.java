@@ -10,23 +10,21 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-public class MutipleexerTimeServer implements Runnable{
+public class MultiplexerTimeServer implements Runnable{
 
     private Selector selector;
-
-    private ServerSocketChannel servChannel;
 
     private volatile boolean stop = false;
 
     /**
      * 创建多路复用器，绑定NIO端口
      *
-     * @param port
+     * @param port 端口
      */
-    public MutipleexerTimeServer(int port){
+    public MultiplexerTimeServer(int port){
         try{
             selector = Selector.open();
-            servChannel = ServerSocketChannel.open();
+            ServerSocketChannel servChannel = ServerSocketChannel.open();
             servChannel.configureBlocking(false);
             servChannel.register(selector, SelectionKey.OP_ACCEPT);
             servChannel.socket().bind(new InetSocketAddress(port),1024);
@@ -35,10 +33,6 @@ public class MutipleexerTimeServer implements Runnable{
             e.printStackTrace();
             System.exit(1);
         }
-    }
-
-    public void stop(){
-        this.stop = stop;
     }
 
     @Override

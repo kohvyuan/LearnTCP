@@ -5,9 +5,9 @@ import io.netty.buffer.ByteBufAllocator;
 
 public class ByteBufTest {
     public static void main(String args[]){
-        // ÔÚÄÚ´æ³ØÖĞÉêÇë Ö±½ÓÄÚ´æ
+        // åœ¨å†…å­˜æ± ä¸­ç”³è¯· ç›´æ¥å†…å­˜
         ByteBuf directByteBuf = ByteBufAllocator.DEFAULT.directBuffer(1024);
-        // ÔÚÄÚ´æ³ØÖĞÉêÇë ¶ÑÄÚ´æ
+        // åœ¨å†…å­˜æ± ä¸­ç”³è¯· å †å†…å­˜
         ByteBuf heapByteBuf = ByteBufAllocator.DEFAULT.heapBuffer(1024);
 
     }
